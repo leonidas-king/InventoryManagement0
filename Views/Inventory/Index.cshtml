@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Inventory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Inventory</h1>
+
+<div>
+    <div class="row pt-4"> 
+        <div class="col-6"> 
+            <h2 class="text-primary">Items List</h2>
+        </div>
+        <div class="col-6 text-end"> 
+            <a asp-controller="Inventory" asp-action="Create" class="btn btn-primary">
+                Add new Item
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Power
+            </th>
+            <th>
+                MRP
+            </th>
+            <th>
+                Whole Sale Rate
+            </th>
+            <th></th>
+            <th><th/>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.ItemName
+                </td>
+                <td>
+                    @obj.Description
+                </td>
+                <td>
+                    @obj.Quantity
+                </td>
+                <td>
+                    @obj.Power
+                </td>
+                <td>
+                    @obj.MRP
+                </td>
+                <td>
+                    @obj.WHOL
+                </td>
+                <td>
+                    <a asp-controller="Inventory" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+                </td>
+                <td>
+                    <a asp-controller="Inventory" asp-action="DeleteItem" asp-route-id="@obj.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
