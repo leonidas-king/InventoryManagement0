@@ -1,8 +1,35 @@
-﻿@{
+﻿@model Login
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h3 class="display-4">Welcome</h3>
+    <h3>Inventory management system.</h3>
 </div>
+
+<center>
+<form method="post" style="width:50%;" asp-action="SignIn"> 
+    <div class="border p-3 mt-4">
+        <div>
+            <div class="row pb-2">
+                <h2 class="text-primary" style="text-align:left;">Login</h2>
+                <hr />
+            </div>
+            <div style="text-align:left;">
+                <label asp-for="UserName "></label>
+                <input asp-for="UserName" class="form-control" />
+            </div>
+            <div style="text-align:left;">
+                <label asp-for="Password "></label>
+                <input asp-for="Password" class="form-control" />
+            </div>
+            <br />
+            <div style="text-align:left;">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+            
+        </div>
+    </div>
+</form>
+</center>

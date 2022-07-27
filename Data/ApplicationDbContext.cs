@@ -11,5 +11,7 @@ namespace InventoryManagement0.Data
         }
 
         public DbSet <Inventory> InventoryTable { get; set; }
+
+        public DbSet <Login> LoginTable { get; set; }
     }
 }
