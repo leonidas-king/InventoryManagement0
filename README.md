@@ -20,7 +20,7 @@ that must be followed:
 
 Launch 
 ```bash
-  Visual Studio 2022 (Preferabily)
+  Visual Studio 2022 (Preferably)
 ```
 Click on 
 ```bash
