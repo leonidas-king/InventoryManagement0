@@ -44,8 +44,6 @@ namespace InventoryManagement0.Controllers
         {
             var proof = _db.LoginTable.Where(s => s.UserName==obj.UserName && s.Password==obj.Password);
             
-            String UserPass = obj.Password;
-            
             int n = proof.Count();
 
             if (n>0)
