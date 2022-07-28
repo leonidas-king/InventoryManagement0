@@ -32,7 +32,7 @@ Paste this link in the "Enter a Git repository URL"
 ```
 Open the "appsetting.json" file and make sure to change the Server name of the "DefaultConnection" Connection String.
 ```bash
-   "DefaultConnection" : "Server='your server name';database='InventorySystem';Trusted_Connection=True;"
+   "DefaultConnection" : "Server='your server name';database=InventorySystem;Trusted_Connection=True;"
 ```
 Open NuGet Package manager by performing following steps:
 ```bash
