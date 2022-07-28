@@ -51,8 +51,13 @@ namespace InventoryManagement0.Controllers
                 return RedirectToAction("Index", "Inventory");
             }
 
-            return NotFound("Wrong Credentials.");
+            return RedirectToAction("ErrorPage");
 
+        }
+
+        public IActionResult ErrorPage()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
