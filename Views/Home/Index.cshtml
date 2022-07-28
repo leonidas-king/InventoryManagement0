@@ -9,7 +9,7 @@
 </div>
 
 <center>
-<form method="post" style="width:50%;" asp-action="SignIn"> 
+<form method="post" style="width:50%;"> 
     <div class="border p-3 mt-4">
         <div>
             <div class="row pb-2">
@@ -17,7 +17,7 @@
                 <hr />
             </div>
             <div style="text-align:left;">
-                <label asp-for="UserName "></label>
+                <label asp-for="UserName ">Username</label>
                 <input asp-for="UserName" class="form-control" />
             </div>
             <div style="text-align:left;">
@@ -26,7 +26,8 @@
             </div>
             <br />
             <div style="text-align:left;">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary" asp-action="SignIn">Sign in</button>
+                <button class="btn btn-secondary" asp-action="GenAcc">Sign up</button>
             </div>
             
         </div>

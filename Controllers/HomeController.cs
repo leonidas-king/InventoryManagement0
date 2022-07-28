@@ -28,15 +28,30 @@ namespace InventoryManagement0.Controllers
             return View();
         }
 
+        public IActionResult GenAcc()
+        {
+            return View();
+        }
+
+        public IActionResult NewAcc(Login obj)
+        {
+            _db.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public IActionResult SignIn(Login obj)
         {
-            var proof = _db.LoginTable.Find(1);
-            String UserId = obj.UserName;
+            var proof = _db.LoginTable.Where(s => s.UserName==obj.UserName && s.Password==obj.Password);
+            
             String UserPass = obj.Password;
+            
+            int n = proof.Count();
 
-
-            if (proof.UserName==UserId && proof.Password==UserPass)
+            if (n>0)
+            {
                 return RedirectToAction("Index", "Inventory");
+            }
 
             return NotFound("Wrong Credentials.");
 

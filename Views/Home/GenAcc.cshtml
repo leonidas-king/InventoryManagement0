@@ -1,0 +1,28 @@
+﻿
+@model Login
+
+@{
+    ViewData["Title"] = "NewAcc";
+}
+
+<h1>Create new admin account</h1>
+
+<form method="post" asp-action="NewAcc">
+    <div class="border p-2 mt-4">
+        <div class="row pb-2">
+        </div>
+        <div> 
+            <label asp-for="UserName">Enter User Name</label>
+            <input asp-for="UserName" class="form-control"/>
+        </div>
+        <div>
+            <label asp-for="Password">Enter Password</label>
+            <input asp-for="Password" class="form-control" />
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to home</a>
+        </div>
+    </div>
+</form>

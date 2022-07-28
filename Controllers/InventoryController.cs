@@ -1,5 +1,6 @@
 ﻿using InventoryManagement0.Data;
 using InventoryManagement0.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagement0.Controllers
@@ -20,7 +21,7 @@ namespace InventoryManagement0.Controllers
         }
 
         public IActionResult Create()
-        {
+        {            
             return View();
         }
 
