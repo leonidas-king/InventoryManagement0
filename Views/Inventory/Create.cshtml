@@ -13,28 +13,34 @@
             <hr>
         </div>
         <div> 
-            <label asp-for="ItemName">Item Name</label>
+            <label asp-for="ItemName"></label>
             <input asp-for="ItemName" class="form-control"/>
+            @Html.ValidationMessageFor(Model => Model.ItemName, "", new {@class = "text-danger"})
         </div>
         <div>
             <label asp-for="Description"></label>
             <input asp-for="Description" class="form-control" />
+            @Html.ValidationMessageFor(Model => Model.Description, "", new {@class = "text-danger"})
         </div>
         <div>
             <label asp-for="Quantity"></label>
             <input asp-for="Quantity" class="form-control" />
+            @Html.ValidationMessageFor(Model => Model.Quantity, "", new {@class = "text-danger"})
         </div>
         <div>
             <label asp-for="Power"></label>
             <input asp-for="Power" class="form-control" />
+            @Html.ValidationMessageFor(Model => Model.Power, "", new {@class = "text-danger"})
         </div>
         <div>
             <label asp-for="MRP"></label>
             <input asp-for="MRP" class="form-control" />
+            @Html.ValidationMessageFor(Model => Model.MRP, "", new {@class = "text-danger"})
         </div>
         <div>
-            <label asp-for="WHOL">Wholesale</label>
+            <label asp-for="WHOL"></label>
             <input asp-for="WHOL" class="form-control" />
+            @Html.ValidationMessageFor(Model => Model.WHOL, "", new {@class = "text-danger"})
         </div>
         <br>
         <div>
