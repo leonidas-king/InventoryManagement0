@@ -4,6 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
+@if(TempData["Msg"] != null)
+{
+    <h4 style="color:skyblue"><i>@TempData["Msg"].ToString()</i></h4>
+}
+
 <h1>Inventory</h1>
 
 <div>
