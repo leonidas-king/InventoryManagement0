@@ -1,14 +1,11 @@
 ﻿using InventoryManagement0.Data;
 using InventoryManagement0.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace InventoryManagement0.Controllers
 {
     //[Route("Action")]
-
-    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
